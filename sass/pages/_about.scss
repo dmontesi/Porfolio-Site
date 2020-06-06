@@ -1,0 +1,14 @@
+.section-skills {
+	padding: 15rem 0;
+	width: 100%;
+	margin: 0 auto;
+
+	@include responsive(tab-port) {
+		padding: 10rem 0;
+	}
+}
+
+.centered {
+	width: 75%;
+	margin: 0 auto;
+}

@@ -1,0 +1,49 @@
+.composition {
+	position: relative;
+
+	@include responsive(tab-land) {
+		margin-right: 5rem;
+	}
+
+	@include responsive(tab-port) {
+		margin-right: 0;
+	}
+
+	&__box {
+		// border-radius: 50%;
+		position: relative;
+		z-index: 2;
+		overflow: hidden;
+	}
+
+	&__photo {
+		width: 100%;
+		min-height: 100%;
+		border-radius: 50% 50%;
+		transition: all 400ms ease;
+		z-index: 2;
+		margin-top: 0.5rem;
+		filter: grayscale(6%);
+		// box-shadow: 0 0.25rem 0.5rem rgba($color-black, 0.1);
+
+		&::after {
+			content: '';
+			display: block;
+			overflow: hidden;
+		}
+
+		&:hover {
+			z-index: 3;
+			filter: grayscale(100%);
+		}
+	}
+
+	&__contact {
+		width: 100%;
+		transition: all 0.2s;
+		transition: all 400ms ease;
+		z-index: 2;
+		margin-top: 0.5rem;
+		filter: grayscale(6%);
+	}
+}

@@ -1,0 +1,60 @@
+.section-about {
+	padding: 15rem 0;
+	width: $grid-width;
+	margin: 0 auto;
+
+	@include responsive(tab-port) {
+		padding: 10rem 0 5rem;
+		width: 75rem;
+	}
+
+	@include responsive(phone) {
+		padding: 10rem 0 2rem;
+		width: 35rem;
+	}
+}
+
+.section-services {
+	padding: 15rem 0;
+	background-color: $color-gray-light-3;
+
+	margin: 0 2rem;
+
+	@include responsive(tab-port) {
+		padding: 10rem 0 ;
+		background-attachment: initial;
+		margin: 0;
+	}
+
+	@include responsive(phone) {
+		background-attachment: initial;
+	}
+}
+
+.section-appfolio {
+	padding: 15rem 0 10rem;
+	background: $color-gray-light-2;
+
+	@include responsive(tab-port) {
+		padding: 10rem 0;
+	}
+}
+
+.section-application {
+	padding: 15rem 0;
+}
+
+.section-contact {
+	padding: 15rem 0;
+	width: $grid-width;
+	margin: 0 auto;
+
+	@include responsive(tab-port) {
+		padding: 10rem 0;
+		width: 75rem;
+	}
+
+	@include responsive(phone) {
+		width: 35rem;
+	}
+}

@@ -1,0 +1,48 @@
+.card {
+	
+	&__details {
+
+		ul {
+			list-style: none;
+			width: 80%;
+			margin: 0 auto;
+
+			li {
+			text-align: center;
+			font-size: 1.5rem;
+			padding: 2rem;
+
+			&:not(:last-child) {
+				border-bottom: 1px solid $color-gray-light-2;
+			}
+
+			&:last-child {
+				margin-bottom: 3rem;
+			}
+			}
+		}
+	}
+
+	&__details-big {
+
+		ul {
+			list-style: none;
+			width: 80%;
+			margin: 0 auto;
+
+			li {
+			text-align: center;
+			font-size: 1.7rem;
+			padding: 1.5rem;
+
+			&:not(:last-child) {
+				border-bottom: 1px solid $color-gray-light-2;
+			}
+
+			&:last-child {
+				margin-bottom: 3rem;
+			}
+			}
+		}
+	}
+}

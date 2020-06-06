@@ -1,0 +1,233 @@
+svg {
+	fill: #fff;
+}
+
+// FONT VARIABLES
+$font-display: 'Source Sans Pro', sans-serif;
+$font-primary: soleil, sans-serif;
+
+/* 
+
+Soleil Light
+
+font-family: soleil, sans-serif;
+font-weight: 300;
+font-style: normal;
+
+Soleil Regular
+
+font-family: soleil, sans-serif;
+font-weight: 400;
+font-style: normal;
+
+Soleil Book
+
+font-family: soleil, sans-serif;
+font-weight: 500;
+font-style: normal;
+
+Soleil Semibold
+
+font-family: soleil, sans-serif;
+font-weight: 600;
+font-style: normal; */
+
+body {
+	font-family: $font-primary;
+	font-weight: 300;
+	line-height: 1.7;
+	font-size: $default-font-size;
+	color: $color-gray-dark;
+
+	@include responsive(tab-port) {
+		line-height: 1.6;
+	}
+}
+
+.heading-primary {
+	color: $color-white;
+	backface-visibility: hidden;
+	margin-bottom: 2rem;
+
+	&--main {
+		font-family: $font-primary;
+		display: block;
+		font-size: 7.6rem;
+		font-weight: 600;
+		line-height: 1;
+		animation: reveal 1s ease-out 0s 1 normal both;
+
+		@include responsive(tab-port) {
+			line-height: 1.15;
+		}
+
+		@include responsive(phone) {
+			font-size: 5rem;
+			line-height: 1;
+			letter-spacing: -0.1rem;
+		}
+	}
+
+	&--sub {
+		display: block;
+		font-size: 3.2rem;
+		font-weight: 300;
+		animation: reveal 0.5s ease-out 0s 1 normal both;
+
+		@include responsive(phone) {
+			font-size: 1.9rem;
+		}
+	}
+
+	&--body {
+		font-family: $font-primary;
+		display: block;
+		font-size: 5.5rem;
+		font-weight: 600;
+		line-height: 1;
+
+		@include responsive(phone) {
+			font-size: 5rem;
+		}
+	}
+}
+
+//pages other than HOME
+
+.heading-primary-small {
+	color: $color-white;
+	text-transform: uppercase;
+	backface-visibility: hidden;
+
+	&--main {
+		display: block;
+		font-size: 6.3rem;
+		font-weight: 700;
+		letter-spacing: 3.5rem;
+		animation-name: moveInLeft;
+		animation-duration: 1s;
+		animation-timing-function: ease-out;
+
+		@include responsive(phone) {
+			letter-spacing: 1rem;
+			font-size: 5rem;
+		}
+	}
+
+	&--sub {
+		display: block;
+		font-size: 2rem;
+		font-weight: 700;
+		letter-spacing: 1.75rem;
+		animation-name: moveInRight;
+		animation-duration: 1s;
+		animation-timing-function: ease-out;
+	}
+}
+
+.heading-secondary {
+	font-family: $font-display;
+	font-size: 5.7rem;
+	font-weight: 600;
+	color: $color-gray-dark;
+
+	@include responsive(tab-port) {
+		font-size: 5rem;
+	}
+
+	@include responsive(phone) {
+		font-size: 3.5rem;
+	}
+}
+
+.heading-tertiary {
+	font-family: $font-primary;
+	font-size: $color-primary-light;
+	text-transform: capitalize;
+	font-weight: 600;
+	font-size: 2.4rem;
+	line-height: 1.2;
+
+	@include responsive(tab-port) {
+		font-size: 2.8rem;
+	}
+}
+
+.paragraph {
+	font-size: $default-font-size;
+
+	&:not(:last-child) {
+		margin-bottom: 3rem;
+	}
+
+	@include responsive(tab-port) {
+		font-size: 2.5rem;
+	}
+
+	@include responsive(phone) {
+		font-size: 1.7rem;
+	}
+}
+
+.highlight {
+	font-size: $default-font-size;
+	font-weight: 600;
+	text-decoration: underline;
+}
+
+.link {
+	&:link,
+	&:visited {
+		color: $color-primary;
+		text-decoration: none;
+		transition: all 0.4s;
+		display: inline-block;
+
+		&::after {
+			content: '';
+			display: block;
+			width: 0;
+			height: 2px;
+			background: $color-secondary;
+			transition: width 0.4s;
+		}
+	}
+
+	&:hover,
+	&:active {
+		color: $color-secondary;
+
+		&::after {
+			width: 100%;
+		}
+	}
+}
+
+.black {
+	font-size: $default-font-size;
+	font-weight: 700;
+}
+
+.small {
+	@include responsive(phone) {
+		font-size: 3.5rem;
+	}
+}
+
+.subscript {
+	font-size: 1.2rem;
+	color: red;
+}
+
+i.fas,
+i.fab {
+	font-size: 2.1rem;
+	padding-right: 2rem;
+	color: $color-gray-light;
+	transition: all 0.2s ease-in;
+
+	&:hover {
+		color: $color-primary-light;
+		transform: translateY(-5px);
+	}
+}

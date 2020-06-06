@@ -1,0 +1,142 @@
+.footer {
+	background: $color-primary;
+	padding: 10rem 0;
+	font-size: 1.4rem;
+	color: $color-gray-light;
+
+	@include responsive(tab-port) {
+		padding: 8rem 0;
+	}
+
+	@include responsive(phone) {
+		padding: 4rem 0;
+	}
+
+	&__logo-box {
+		text-align: center;
+		margin-bottom: 5rem;
+
+		@include responsive(tab-port) {
+			margin-bottom: 0rem;
+		}
+
+		@include responsive(phone) {
+			margin-bottom: 2rem;
+		}
+	}
+
+	&__logo {
+		width: 25rem;
+		height: auto;
+	}
+
+	&__navigation {
+		// border-top: 1px solid $color-white;
+		display: inline-block;
+		padding-top: 2rem;
+
+		@include responsive(tab-port) {
+			width: 100%;
+			text-align: center;
+		}
+
+		@include responsive(phone) {
+			padding-top: 0;
+		}
+	}
+
+	&__list {
+		list-style: none;
+	}
+
+	&__item {
+		display: inline-block;
+
+		&:not(:last-child) {
+			margin-right: 1.4rem;
+		}
+	}
+
+	&__link {
+		&:link,
+		&:visited {
+			font-weight: 300;
+			font-size: 1.4rem;
+			text-decoration: none;
+			text-transform: capitalize;
+			display: inline-block;
+			transition: all 0.4s;
+			color: $color-gray-light-3;
+		}
+
+		&:hover,
+		&:active {
+			color: $color-secondary;
+			// border-bottom: 1px solid $color-primary;
+
+			&::after {
+				width: 100%;
+			}
+		}
+	}
+
+	&__column {
+		display: inline-block;
+
+		@include responsive(tab-port) {
+			width: 100%;
+			float: none;
+			text-align: center;
+			line-height: 0.5rem;
+		}
+	}
+
+	&__copyright {
+		// border-top: 1px solid $color-white;
+		display: inline-block;
+		padding-top: 2rem;
+
+		&:not(:last-child) {
+			margin-bottom: 1.4rem;
+		}
+
+		@include responsive(tab-port) {
+			width: 100%;
+			float: none;
+			text-align: center;
+		}
+	}
+
+	&__items {
+		display: flex;
+		align-items: flex-end;
+
+		@include responsive(phone) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+}
+
+// entypo
+[class*='entypo-']:before,
+[class*='entypo-']:link,
+[class*='entypo-']:visited {
+	font-family: 'entypo', sans-serif;
+	font-size: 1.7rem;
+	font-weight: 100;
+	color: $color-white;
+	margin-right: 2rem;
+	text-decoration: none;
+	display: inline-block;
+
+	@include responsive(tab-port) {
+		margin-right: 0rem;
+		margin: 0 1rem;
+	}
+}
+
+[class*='entypo-']:hover,
+[class*='entypo-']:visited {
+	color: $color-secondary;
+}

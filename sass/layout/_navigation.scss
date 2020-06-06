@@ -1,0 +1,381 @@
+//&:not(:only-child):after {content: ' ▾'; Dropdown arrow}
+
+#navbar {
+	position: -webkit-sticky;
+	position: sticky;
+	background-color: #fff;
+	top: 0rem;
+	width: 100%;
+	z-index: 1000;
+	transition: 0.5s;
+}
+
+.navigation {
+	//DESKTOP NAVIGATION ONLY MIN-WIDTH 900
+
+	&__nav {
+		height: 8rem;
+		text-align: center;
+
+		@media only screen and (max-width: 56.25em), only screen and (hover: none) {
+			display: none;
+		}
+
+		&-primary {
+			list-style: none;
+			padding: 0;
+			margin-left: 5rem;
+			float: left;
+			z-index: 3;
+
+			> .navigation__item {
+				padding: 0;
+				margin: 0;
+				height: 5rem;
+				float: left;
+				position: relative;
+				cursor: pointer;
+			}
+		}
+	}
+
+	&__item {
+		display: inline-block;
+		margin: 0.5rem;
+		position: relative;
+	}
+
+	&__link {
+		&--centered {
+			&:link,
+			&:visited {
+				font-weight: 400;
+				padding: 3rem 2.5rem;
+				font-size: 1.6rem;
+				color: $color-gray-dark;
+				text-decoration: none;
+				// text-transform: uppercase;
+				display: inline-block;
+				transition: all 0.4s;
+
+				&::after {
+					content: '';
+					display: block;
+					width: 0;
+					background: $color-primary;
+					transition: all 0.4s 0.2s;
+				}
+			}
+
+			&:hover,
+			&:active {
+				color: $color-primary-dark;
+
+				&::after {
+					width: 100%;
+					height: 0.15rem;
+				}
+			}
+		}
+
+		&:target {
+			transition: all 4s;
+		}
+	}
+
+	&__logo-box {
+		position: absolute;
+		top: 4rem;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 1000;
+		text-align: center;
+
+		@include responsive(tab-port) {
+			top: 3.5rem;
+			background: $color-white;
+			width: 100%;
+		}
+	}
+
+	&__logo {
+		height: 6rem;
+
+		@include responsive(tab-port) {
+			height: 7.5rem;
+			margin-top: 1.1rem;
+		}
+
+		@include responsive(phone) {
+			height: 5.9rem;
+			margin-top: 1rem;
+		}
+	}
+
+	// MOBILE NAV
+
+	&__toggle-box {
+		display: none;
+
+		@media only screen and (max-width: 56.25em), only screen and (hover: none) {
+			display: block;
+		}
+	}
+
+	&__checkbox {
+		display: none;
+	}
+
+	&__button {
+		background-color: transparent;
+		height: 7rem;
+		width: 7rem;
+		position: absolute;
+		top: 4.5rem;
+		right: 4.5rem;
+		z-index: 2000;
+		text-align: center;
+		cursor: pointer;
+
+		@include responsive(tab-port) {
+			background-color: $color-white;
+			border-radius: 50% 50%;
+			top: 0.5rem;
+			right: 3rem;
+		}
+
+		@include responsive(phone) {
+			top: 0rem;
+			right: 3rem;
+		}
+	}
+
+	&__background {
+		height: 6rem;
+		width: 6rem;
+		border-radius: 50%;
+		position: fixed;
+		top: 5rem;
+		right: 5rem;
+		background-image: radial-gradient($color-primary, $color-primary-dark);
+		z-index: 100;
+		transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+		opacity: 0;
+
+		@include responsive(tab-port) {
+			top: 4.5rem;
+			right: 4.5rem;
+		}
+
+		@include responsive(phone) {
+			top: 3.5rem;
+			right: 3.5rem;
+		}
+
+		// transform: scale(80);
+	}
+
+	//FUNCTIONALITY
+
+	&__checkbox:checked ~ &__background {
+		transform: scale(80);
+		opacity: 1;
+	}
+
+	&__checkbox:checked ~ &__nav-toggle {
+		opacity: 1;
+		width: 100%;
+	}
+
+	//ICON
+
+	&__icon {
+		position: relative;
+		margin-top: 3.5rem;
+		background-color: $color-primary;
+
+		&,
+		&::before,
+		&::after {
+			width: 3rem;
+			height: 2px;
+			background-color: $color-primary;
+			display: inline-block;
+		}
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			transition: all 0.2s;
+		}
+
+		&::before {
+			top: -0.8rem;
+		}
+
+		&::after {
+			top: 0.8rem;
+		}
+	}
+
+	&__button:hover &__icon::before {
+		top: -1rem;
+	}
+
+	&__button:hover &__icon::after {
+		top: 1rem;
+	}
+
+	&__nav-toggle {
+		height: 100vh;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 150;
+
+		opacity: 0;
+		width: 0;
+		transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+	}
+
+	&__toggle-list {
+		@include centered;
+		list-style: none;
+		text-align: center;
+		width: 100%;
+	}
+
+	&__toggle-item {
+		margin: 1rem;
+	}
+
+	&__toggle-link {
+		&:link,
+		&:visited {
+			display: inline-block;
+			font-size: 3rem;
+			font-weight: 300;
+			color: $color-white;
+			text-decoration: none;
+			text-transform: uppercase;
+			padding: 1rem 2rem;
+			background-image: linear-gradient(
+				90deg,
+				transparent 0%,
+				transparent 50%,
+				$color-white 50%
+			);
+			background-size: 230%;
+			transition: all 0.4s;
+		}
+
+		&:hover,
+		&:active {
+			background-position: 100%;
+			color: $color-primary;
+			transform: translateX(1rem);
+		}
+	}
+}
+
+//DROPDOWN NAV
+
+.dropdown {
+	position: absolute;
+	top: 100%;
+	left: 0%;
+	width: 100%;
+	padding: 0;
+	width: 25rem;
+	border-radius: 0px 0px 0.3rem 0.3rem;
+
+	&--item {
+		width: 25rem;
+		background: $color-white;
+
+		&:link,
+		&:visited {
+			font-weight: 400;
+			padding: 2rem 3rem;
+			font-size: 1.2rem;
+			color: $color-gray-dark;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			transition: all 0.4s;
+
+			&::after {
+				content: '';
+				display: block;
+				width: 0;
+				height: 0px;
+				background: $color-secondary;
+				transition: width 0.4s;
+			}
+		}
+
+		&:hover,
+		&:active {
+			color: $color-secondary;
+			background: $color-gray-light;
+			// border-bottom: 1px solid $color-primary;
+
+			&::after {
+				width: 100%;
+			}
+		}
+	}
+}
+
+// Default Trigger
+
+ul.dropdown li {
+	display: none; // HIDE
+}
+li:hover > ul.dropdown li {
+	display: block; // SHOW
+}
+
+// MENU-1 -------------------------------------
+
+li:hover > ul.dropdown.menu-1 {
+	perspective: 100rem;
+	li {
+		opacity: 0;
+		@for $i from 1 through 6 {
+			&:nth-child(#{$i}) {
+				animation-name: menu1;
+				animation-duration: 300ms;
+				animation-delay: (150ms * $i) - 300ms;
+				animation-timing-function: ease-in-out;
+				animation-fill-mode: forwards;
+			}
+		}
+	}
+}
+
+@keyframes menu1 {
+	0% {
+		opacity: 0;
+		transform: rotateY(-90deg) translateY(5rem);
+	}
+	100% {
+		opacity: 1;
+		transform: rotateY(0deg) translateY(0px);
+	}
+}
+
+.arrow-right {
+	border: solid $color-gray-dark;
+	border-width: 0 0.2rem 0.2rem 0;
+	display: inline-block;
+	padding: 0.2rem;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	position: absolute;
+	top: 3.9rem;
+	right: 0.7rem;
+}

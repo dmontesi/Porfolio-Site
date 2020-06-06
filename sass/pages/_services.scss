@@ -1,0 +1,21 @@
+.section-services {
+	
+	&__page {
+		padding: 15rem 0;
+
+		@include responsive(tab-port) {
+	        padding: 10rem 0;
+	    }
+	}
+
+	&__blurb,
+	&__portal {
+		width: 75%;
+		margin: 0 auto;
+
+		@include responsive(tab-port) {
+			
+		}
+	}
+
+}

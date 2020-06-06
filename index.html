@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link
+			href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="https://use.typekit.net/rxz7cpd.css" />
+
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
+		<meta
+			name="description"
+			content="I began my career over a decade ago as a Graphic Designer in my home country, Venezuela. I've always had a passion for clean and minimal design. I spend my free time working on personal & freelance projects ranging from Web Development to Digital Marketing. My other passions are traveling, recording music, biking, kayaking, and spending time with my pets, and family."
+		/>
+		<meta
+			name="keywords"
+			content="Dan Montesinos Portfolio Digital Graphic Design Responsive Web Design Web Development Front-End Web Development Marketing Flyers Websites Posters Business Cards Mobile Apps Design Packaging Photo Retouching Boston Massachusetts USA Venezuela"
+		/>
+		<meta name="author" content="Dan Montesinos | danmontesinos6@gmail.com" />
+		<meta property="og:title" content="Dan Montesinos | Front End Developer" />
+
+		<title>Dan Montesinos</title>
+
+		<script>
+			(function (i, s, o, g, r, a, m) {
+				i['GoogleAnalyticsObject'] = r;
+				(i[r] =
+					i[r] ||
+					function () {
+						(i[r].q = i[r].q || []).push(arguments);
+					}),
+					(i[r].l = 1 * new Date());
+				(a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+				a.async = 1;
+				a.src = g;
+				m.parentNode.insertBefore(a, m);
+			})(
+				window,
+				document,
+				'script',
+				'https://www.google-analytics.com/analytics.js',
+				'ga'
+			);
+
+			ga('create', 'UA-58455155-2', 'auto');
+			ga('send', 'pageview');
+		</script>
+	</head>
+	<body>
+		<div class="navigation" id="navbar">
+			<picture class="navigation__logo-box" id="navbar_logo">
+				<source
+					srcset="img/logo.png 1x, img/logo.png 2x"
+					media="(max-width: 75em)"
+					class="navigation__logo"
+				/>
+				<img
+					srcset="img/logo.png 1x, img/logo.png 2x"
+					alt="Logo"
+					src="img/logo.png"
+					class="navigation__logo"
+				/>
+			</picture>
+
+			<div class="navigation__toggle-box">
+				<input type="checkbox" class="navigation__checkbox" id="nav-toggle" />
+				<label for="nav-toggle" class="navigation__button">
+					<span class="navigation__icon">&nbsp;</span>
+				</label>
+
+				<div class="navigation__background">&nbsp;</div>
+
+				<nav class="navigation__nav-toggle">
+					<ul class="navigation__toggle-list">
+						<li class="navigation__toggle-item">
+							<a href="index.html" class="navigation__toggle-link">Home</a>
+						</li>
+						<li class="navigation__toggle-item">
+							<a
+								href="http://danmontesinos.com/index.html#about"
+								class="navigation__toggle-link"
+								>About</a
+							>
+						</li>
+						<li class="navigation__toggle-item">
+							<a
+								href="https://danmontesinos.myportfolio.com/"
+								class="navigation__toggle-link"
+								>Work</a
+							>
+						</li>
+						<li class="navigation__toggle-item">
+							<a
+								href="http://danmontesinos.com/index.html#contact"
+								class="navigation__toggle-link"
+								>Contact</a
+							>
+						</li>
+					</ul>
+				</nav>
+			</div>
+
+			<nav class="navigation__nav">
+				<ul class="navigation__nav-primary u-center-text">
+					<li class="navigation__item">
+						<a href="#!" class="navigation__link navigation__link--centered">Home</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#about" class="navigation__link navigation__link--centered"
+							>About</a
+						>
+					</li>
+					<li class="navigation__item">
+						<a href="#work" class="navigation__link navigation__link--centered"
+							>Services</a
+						>
+					</li>
+					<li class="navigation__item">
+						<a href="#contact" class="navigation__link navigation__link--centered"
+							>Contact</a
+						>
+					</li>
+				</ul>
+			</nav>
+		</div>
+
+		<header class="header">
+			<div class="header__text-box">
+				<h1 class="heading-primary">
+					<span class="heading-primary--sub">Hi, I'm Dan</span>
+					<span class="heading-primary--main u-margin-bottom-med"
+						>Designer <span class="small">&</span> Developer</span
+					>
+				</h1>
+
+				<a href="#work" class="btn btn--dark btn--animated">View My Work</a>
+			</div>
+		</header>
+
+		<main>
+			<section class="section-about" id="about">
+				<div class="row box fade-in">
+					<div class="col-2-of-3">
+						<h1 class="heading-secondary">
+							Glad you're here
+						</h1>
+						<p class="paragraph u-margin-bottom-med">
+							I began my career over a decade ago as a Graphic Designer in my home
+							country, Venezuela. Later on, I expanded my passion for clean and
+							minimal design to the digital world of web coding. I spend my free time
+							working on personal & freelance projects ranging from Design to Front
+							End Development. Outside of work, I enjoy spending time in nature,
+							traveling, making & recording music at home, photographing, hiking, and
+							sharing time with my wife, daughter and my two cats.
+						</p>
+
+						<a
+							href="https://www.linkedin.com/in/daniel-montesinos"
+							class="btn btn--dark-2 btn--space"
+							target="_blank"
+							>Say Hi on LinkedIn</a
+						>
+					</div>
+					<div class="col-1-of-3 composition">
+						<div class="composition__box fade-box">
+							<picture>
+								<source
+									data-srcset="img/WebP/dan-small.webp 1x, img/WebP/dan.webp 2x"
+									type="image/webp"
+								/>
+								<source
+									data-srcset="img/dan-small.jpg 1x, img/dan.jpg 2x"
+									type="image/jpg"
+								/>
+								<img
+									data-srcset="img/dan-small.jpg 1x, img/dan.jpg 2x"
+									class="composition__photo lazyload"
+									data-src="img/dan-small.jpg"
+									alt="Photo 1"
+								/>
+							</picture>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section-services" id="work">
+				<div class="row fade-in">
+					<h2 class="heading-secondary">Services</h2>
+					<div class="paragraph">
+						Offering modern, highly responsive and optimized front end websites and
+						graphics for any of your needs. From wireframe designs to final
+						production.
+					</div>
+					<div class="col-1-of-3">
+						<div class="services__box fade-box">
+							<!-- <svg class="services__box__icon">
+								<use xlink:href="img/sprite.svg#icon-responsive"></use>
+							</svg> -->
+							<a href="https://danmontesinos.myportfolio.com/websites">
+								<div class="services__box--img services__box--img-1 lazyload"></div
+							></a>
+
+							<div class="services__content">
+								<h3 class="heading-tertiary u-margin-bottom-tiny">
+									Front End Development
+								</h3>
+								<p class="paragraph">
+									Offering highly responsive, mobile friendly sites that look up to
+									date with the latest trends.
+								</p>
+								<a
+									href="https://danmontesinos.myportfolio.com/websites"
+									rel="noreferrer"
+									class="btn btn--light"
+									>View Samples →</a
+								>
+							</div>
+						</div>
+					</div>
+					<div class="col-1-of-3">
+						<div class="services__box fade-box">
+							<!-- <svg class="services__box__icon">
+								<use xlink:href="img/sprite.svg#icon-pen"></use>
+							</svg> -->
+							<a href="https://danmontesinos.myportfolio.com/graphics">
+								<div class="services__box--img services__box--img-2 lazyload"></div
+							></a>
+
+							<div class="services__content">
+								<h3 class="heading-tertiary u-margin-bottom-tiny">
+									Graphic Design
+								</h3>
+								<p class="paragraph">
+									From high end brochures to band album covers. Printing available
+									through third party.
+								</p>
+								<a
+									href="https://danmontesinos.myportfolio.com/graphics"
+									rel="noreferrer"
+									class="btn btn--light"
+									>View Samples →</a
+								>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-1-of-3">
+						<div class="services__box fade-box">
+							<!-- <svg class="services__box__icon">
+								<use xlink:href="img/sprite.svg#icon-realestate"></use>
+							</svg> -->
+							<a href="https://danmontesinos.com/InFocus" target="_blank">
+								<div class="services__box--img services__box--img-3 lazyload"></div>
+							</a>
+
+							<div class="services__content">
+								<h3 class="heading-tertiary u-margin-bottom-tiny">
+									Real Estate <span class="subscript">new</span>
+								</h3>
+								<p class="paragraph">
+									I've partnered with
+									<span class="highlight">InFocus RE Marketing</span> to offer
+									incredible materials for Real Estate.
+								</p>
+								<a
+									href="https://infocusremarketing.com/"
+									target="_blank"
+									rel="noreferrer"
+									class="btn btn--light"
+									>Visit Website →</a
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section-contact fade-in" id="contact">
+				<div class="row box" v-scroll="handleScroll">
+					<div class="col-2-of-3">
+						<h2 class="heading-secondary">Contact</h2>
+						<p class="paragraph">
+							Whether you would like my services for a project, get extra information
+							on any of my work, ask me about this site or just say hello then you're
+							in the right place.
+						</p>
+						<a
+							href="mailto:hello@danmontesinos.com?Subject=Inquiry"
+							class="btn btn--dark-2 btn--space"
+							>Let's chat.</a
+						>
+					</div>
+
+					<div class="col-1-of-3 composition">
+						<div class="composition__box fade-box">
+							<picture>
+								<source
+									data-srcset="img/WebP/reachout-small.webp 1x, img/WebP/reachout.webp 2x"
+									type="image/webp"
+								/>
+								<source
+									data-srcset="img/reachout-small.jpg 1x, img/reachout.jpg 2x"
+									type="image/jpg"
+								/>
+								<img
+									data-srcset="img/reachout-small.jpg 1x, img/reachout.jpg 2x"
+									class="composition__photo lazyload"
+									data-src="img/reachout-small.jpg"
+									alt="Photo 1"
+								/>
+							</picture>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="footer__logo-box">
+				<img
+					class="footer__logo"
+					src="img/logo-white.png"
+					alt="Dan Montesinos Logo"
+				/>
+			</div>
+
+			<div class="row footer__items">
+				<div class="col-1-of-2">
+					<div class="footer__navigation">
+						<ul class="footer__list">
+							<li class="footer__item">
+								<a href="index.html" class="footer__link">Home</a>
+							</li>
+							<li class="footer__item">
+								<a href="about.html" class="footer__link">About</a>
+							</li>
+							<li class="footer__item">
+								<a href="services.html" class="footer__link">Services</a>
+							</li>
+							<li class="footer__item">
+								<a href="contact.html" class="footer__link">Contact</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-1-of-2">
+					<div class="footer__column social">
+						<a href="https://github.com/dmontesi" target="_blank"
+							><i class="fab fa-github-alt"></i
+						></a>
+						<a href="https://www.behance.net/dmontesinos" target="_blank"
+							><i class="fab fa-behance"></i
+						></a>
+						<a href="https://www.linkedin.com/in/daniel-montesinos" target="_blank"
+							><i class="fab fa-linkedin-in"></i
+						></a>
+					</div>
+					<p class="footer__copyright">
+						2020 &copy; Dan Montesinos. All Rights Reserved. Site development by
+						<a href="http://danmontesinos.com/" target="_blank" class="footer__link"
+							>Dan Montesinos.</a
+						>
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<script
+			type="text/javascript"
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+		></script>
+		<script
+			src="https://kit.fontawesome.com/2e9a979dd4.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="js/lazysizes.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

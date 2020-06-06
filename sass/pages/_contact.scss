@@ -1,0 +1,47 @@
+.section-contact__page {
+	padding: 15rem 0;
+
+	@include responsive(tab-port) {
+        padding: 10rem 0;
+    }
+}
+
+.section-form {
+	width: 100%;
+	padding: 15rem 0;
+	background-image: linear-gradient(
+		to right bottom, 
+		rgba($color-secondary, 0.2), 
+		rgba($color-primary-light, 0.9)), 
+	url(../img/info-small.jpg);
+	background-blend-mode: overlay;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+
+	@media (min-resolution: 192dpi) and (min-width: 600px), (min-width: 1680px) {
+		background-image: linear-gradient(
+		to right bottom, 
+		rgba($color-secondary, 0.2), 
+		rgba($color-primary-light, 0.9)), 
+	url(../img/info-large.jpg);
+	}
+
+	@include responsive(tab-port) {
+        padding: 10rem 0;
+    }
+
+	&__info {
+		width: 50%;
+		background-color: rgba($color-white, 0.9);
+		padding: 8rem 0;
+		display: block;
+		margin: 0 auto;
+
+		@include responsive(tab-port) {
+        	width: 100%;
+        	padding: 4rem 0;
+    	}
+	}
+}
+

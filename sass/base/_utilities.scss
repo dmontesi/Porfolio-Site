@@ -1,0 +1,61 @@
+// Texts
+
+.u-center-text {
+	text-align: center;
+}
+
+.u-right-text {
+	text-align: right;
+}
+
+.u-bold {
+	font-weight: 700;
+}
+
+// Margins
+
+.u-margin-bottom-tiny {
+	margin-bottom: 0.5rem;
+}
+
+.u-margin-bottom-small {
+	margin-bottom: 2rem;
+}
+.u-margin-bottom-med {
+	margin-bottom: 4rem;
+
+	@include responsive(tab-port) {
+		margin-bottom: 3rem;
+	}
+}
+.u-margin-bottom-big {
+	margin-bottom: 8rem;
+
+	@include responsive(tab-port) {
+		margin-bottom: 6rem;
+	}
+}
+
+.u-margin-top-small {
+	margin-top: 2rem;
+}
+.u-margin-top-med {
+	margin-top: 4rem;
+
+	@include responsive(tab-port) {
+		margin-top: 3rem;
+	}
+}
+.u-margin-top-big {
+	margin-top: 8rem;
+
+	@include responsive(tab-port) {
+		margin-top: 6rem;
+	}
+}
+
+//Backgrounds
+
+.gray-bg {
+	background: $color-gray-light;
+}

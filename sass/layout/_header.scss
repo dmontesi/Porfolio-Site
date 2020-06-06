@@ -1,0 +1,62 @@
+//Header Home
+
+.header {
+	height: 85vh;
+	position: relative;
+	background: rgba($color-primary, 0.4) url(../img/bg.jpg);
+	background-size: cover;
+	background-blend-mode: soft-light;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin: 0 2rem;
+
+	@media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+		(min-width: 105em) {
+		background: rgba($color-primary, 0.4) url(../img/bg.jpg);
+		background-position: center;
+		background-size: cover;
+	}
+
+	@include responsive(tab-port) {
+		background-attachment: initial;
+		margin: 0;
+	}
+
+	&-small {
+		height: 60vh;
+		position: relative;
+		background: rgba($color-primary, 0.4) url(../img/about-small.jpg);
+		background-size: cover;
+		background-blend-mode: multiply;
+		background-position: center;
+		background-repeat: no-repeat;
+
+		@media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+			(min-width: 105em) {
+			background: rgba($color-primary, 0.4) url(../img/about-large.jpg);
+			background-position: center;
+		}
+
+		@include responsive(tab-port) {
+			background-attachment: initial;
+		}
+	}
+
+	&__text-box {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		width: 110rem;
+
+		@include responsive(tab-port) {
+			width: 75rem;
+		}
+
+		@include responsive(phone) {
+			top: 60%;
+			width: 35rem;
+		}
+	}
+}
