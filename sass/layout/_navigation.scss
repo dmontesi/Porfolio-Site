@@ -3,7 +3,6 @@
 #navbar {
 	position: -webkit-sticky;
 	position: sticky;
-	background-color: #fff;
 	top: 0rem;
 	width: 100%;
 	z-index: 1000;
@@ -11,6 +10,8 @@
 }
 
 .navigation {
+	background-color: rgba($color-white, 0.85);
+	backdrop-filter: saturate(200%) blur(20px);
 	display: flex;
 	align-items: center;
 	position: relative;
