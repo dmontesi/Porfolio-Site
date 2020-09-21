@@ -464,8 +464,7 @@ i.fab {
   background-size: cover;
   background-blend-mode: soft-light;
   background-position: center;
-  background-repeat: no-repeat;
-  margin: 0 2rem; }
+  background-repeat: no-repeat; }
   @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 105em) {
     .header {
       background: rgba(34, 34, 34, 0.4) url(../img/bg.jpg);
@@ -514,7 +513,7 @@ i.fab {
   transition: 0.5s; }
 
 .navigation {
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.88);
   backdrop-filter: saturate(200%) blur(20px);
   display: flex;
   align-items: center;
