@@ -18,10 +18,8 @@
 	padding: 15rem 0;
 	background-color: $color-gray-light-3;
 
-	margin: 0 2rem;
-
 	@include responsive(tab-port) {
-		padding: 10rem 0 ;
+		padding: 10rem 0;
 		background-attachment: initial;
 		margin: 0;
 	}
