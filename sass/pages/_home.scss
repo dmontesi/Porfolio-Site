@@ -1,5 +1,5 @@
 section {
-	&:nth-child(even) {
+	&:nth-of-type(even) {
 		background: $color-gray-light-3;
 	}
 }
