@@ -1,3 +1,9 @@
+section {
+	&:nth-child(even) {
+		background: $color-gray-light-3;
+	}
+}
+
 .section-about {
 	padding: 15rem 0;
 	width: $grid-width;
@@ -16,7 +22,6 @@
 
 .section-services {
 	padding: 15rem 0;
-	background-color: $color-gray-light-3;
 
 	@include responsive(tab-port) {
 		padding: 10rem 0;
@@ -31,7 +36,6 @@
 
 .section-appfolio {
 	padding: 15rem 0 10rem;
-	background: $color-gray-light-2;
 
 	@include responsive(tab-port) {
 		padding: 10rem 0;
