@@ -25,9 +25,6 @@
 	"devDependencies": {
 		"concat": "^1.0.3",
 		"imagemin": "^8.0.1",
-		"imagemin-mozjpeg": "^8.0.0",
-		"imagemin-pngquant": "^8.0.0",
-		"imagemin-webp": "^5.0.0",
 		"lazysizes": "^5.2.0"
 	}
 }
