@@ -3,7 +3,7 @@
 .header {
 	min-height: 82vh;
 	position: relative;
-	background-color: $color-primary-dark;
+	background-color: rgba($color-primary-dark, 0.4);
 	background-image: url(../img/bg-small.jpg);
 	background-blend-mode: soft-light;
 	background-size: cover;

@@ -609,7 +609,7 @@ i.fab:hover {
 .header {
   min-height: 82vh;
   position: relative;
-  background-color: #171717;
+  background-color: rgba(23, 23, 23, 0.4);
   background-image: url(../img/bg-small.jpg);
   background-blend-mode: soft-light;
   background-size: cover;
