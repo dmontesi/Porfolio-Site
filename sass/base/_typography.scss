@@ -55,7 +55,7 @@ body {
 		font-size: 7.6rem;
 		font-weight: 600;
 		line-height: 1;
-		animation: reveal 1s ease-out 0s 1 normal both;
+		animation: reveal 1s ease-out 0.8s 1 normal both;
 
 		@include responsive(tab-port) {
 			line-height: 1.15;
@@ -76,6 +76,11 @@ body {
 
 		@include responsive(phone) {
 			font-size: 1.9rem;
+		}
+
+		span {
+			border-bottom: 1.5px solid $color-white;
+			font-style: italic;
 		}
 	}
 
